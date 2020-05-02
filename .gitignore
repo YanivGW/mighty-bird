@@ -1,3 +1,8 @@
+# Build directory
+bin/
+
+# ------- Auto generated -------
+
 # Prerequisites
 *.d
 
