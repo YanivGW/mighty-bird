@@ -1,0 +1,41 @@
+[binaries]
+c       = 'arm-none-eabi-gcc'
+cpp     = 'arm-none-eabi-g++'
+ld      = 'arm-none-eabi-ld'
+ar      = 'arm-none-eabi-ar'
+as      = 'arm-none-eabi-as'
+size    = 'arm-none-eabi-size'
+objdump = 'arm-none-eabi-objdump'
+objcopy = 'arm-none-eabi-objcopy'
+strip   = 'arm-none-eabi-strip'
+gdb     = 'arm-none-eabi-gdb'
+
+[properties]
+c_args      = [
+                '-std=c99',
+                '-ggdb',
+                '-ffunction-sections',
+                '-O0',
+                '-Wall',
+                # ------ Common ------
+                '-mcpu=cortex-m4',
+                '-mthumb',
+                '-mfpu=fpv4-sp-d16',
+                '-mfloat-abi=soft',
+               ]
+
+c_link_args = [
+               '--specs=nano.specs',
+               '--specs=nosys.specs',
+                # ------ Common ------
+                '-mcpu=cortex-m4',
+                '-mthumb',
+                '-mfpu=fpv4-sp-d16',
+                '-mfloat-abi=soft',
+              ]
+
+[host_machine]
+system     = 'none'
+cpu_family = 'arm'
+cpu        = 'cortex-m4'
+endian     = 'little'
