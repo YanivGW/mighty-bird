@@ -11,7 +11,6 @@ bsp_incdirs += include_directories('emlib/inc')
 # sources
 bsp_srcs += ['device/system_efr32mg12p.c']
 
-bsp_srcs += ['device/startup_efr32mg12p.c']
 bsp_srcs += ['device/system_efr32mg12p.c']
 bsp_srcs += ['emlib/src/em_acmp.c']
 bsp_srcs += ['emlib/src/em_adc.c']
