@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "buildscripts/build.sh",
+            "args": [],
+    
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                // Reveal the output only if unrecognized errors occur.
+                "echo": true,
+                "focus": false,
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${workspaceRoot}"
+            },
+        },
+    ]
+}
