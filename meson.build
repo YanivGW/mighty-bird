@@ -36,12 +36,16 @@ endforeach
 subdir('BSP')
 
 #==============================================================================#
-srcs += ['src/Board/delay.c']
+srcs += ['src/Utils/delay.c']
 
 srcs = files(srcs)
 
 #==============================================================================#
-incdirs += include_directories('src/Board')
+incdirs += include_directories('src/Utils')
+incdirs += include_directories('src/Kit/BoardConfig')
+incdirs += include_directories('src/Kit/BoardConfig')
+incdirs += include_directories('src/Kit/Common/BSP')
+incdirs += include_directories('src/Kit/Common/BSP/thunderboard')
 
 #==============================================================================#
 elf = executable(

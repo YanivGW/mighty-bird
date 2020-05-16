@@ -10,6 +10,7 @@
 #include <delay.h>
 
 /* BSP headers */
+#include <bsp.h>
 #include <em_chip.h>
 #include <em_cmu.h>
 
@@ -20,7 +21,7 @@ int main()
     Delay_Init();
 
     CMU_ClockEnable(cmuClock_GPIO, true);
-    GPIO_PinModeSet(gpioPortD, 9, gpioModePushPull, 1);
+    GPIO_PinModeSet(BOARD_LED_GREEN_PORT, BOARD_LED_GREEN_PIN, gpioModePushPull, 1);
 
     while (true)
     {
