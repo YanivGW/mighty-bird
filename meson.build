@@ -36,9 +36,17 @@ endforeach
 subdir('BSP')
 
 #==============================================================================#
+srcs += ['src/Board/delay.c']
+
+srcs = files(srcs)
+
+#==============================================================================#
+incdirs += include_directories('src/Board')
+
+#==============================================================================#
 elf = executable(
             project_name,
-            [srcs, bsp_srcs, 'main.c', startupfile] ,
+            [srcs, bsp_srcs, 'src/main.c', startupfile] ,
             name_suffix         : 'elf',
             c_args              : [c_args ],
             link_args           : [link_args, '-Wl,--gc-sections'],
