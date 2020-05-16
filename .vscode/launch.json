@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (JLink)",
+            "cwd": "${workspaceRoot}",
+            "executable": "./bin/mighty_bird.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "device": "EFR32MG12PxxxF1024",
+            "servertype": "jlink",
+            "interface": "swd",
+            "serverpath": "C:\\Program Files (x86)\\SEGGER\\JLink\\JLinkGDBServerCL.exe",
+            "runToMain": true,
+        }
+    ]
+}

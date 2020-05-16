@@ -47,6 +47,7 @@ build/
 *.su
 *.idb
 *.pdb
+.vscode/.cortex-debug.*
 
 # Kernel Module Compile Results
 *.mod*
